@@ -1,0 +1,32 @@
+// =================================================================================================
+// ---- Globals ----
+// =================================================================================================
+
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+    -webkit-user-drag: none;
+    outline: none;
+}
+
+
+html,
+body {
+    box-sizing: border-box;
+    background-color: $white;
+    font-family: 'Open Sans Regular';
+    @extend .smooth;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+
+// ==|== Disable Click Events ======================================================================
+.disable-click {
+    pointer-events: none;
+    cursor: default;
+}

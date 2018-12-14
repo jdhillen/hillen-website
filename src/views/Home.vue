@@ -1,18 +1,71 @@
+<!--|== Template =============================================================================== -->
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <section class="home row">
+
+        <div class="col-xs-12">
+            <img src="~@/assets/img/logo.png">
+        </div>
+
+  </section>
 </template>
 
+
+<!--|== Scripts ================================================================================ -->
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
-  name: 'home',
-  components: {
-    HelloWorld
-  }
-}
+    name: 'home',
+
+    components: {
+
+    },
+
+    data() {
+        return {
+            
+        };
+    },
+
+    beforeCreate() {
+        
+    },
+
+    created() {
+
+    },
+
+    beforeMount() {
+        
+    },
+
+    mounted() {
+       
+    },
+
+    beforeUpdate() {
+
+    },
+
+    updated() {
+        
+    },
+
+    beforeDestroy() {
+    
+    },
+
+    destroyed() {
+
+    }
+    
+};
+
 </script>
+
+
+<!--|== CSS ==================================================================================== -->
+<style lang="scss">
+.home {
+    
+}
+</style>

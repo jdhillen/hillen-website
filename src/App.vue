@@ -1,29 +1,46 @@
+<!--|== Template =============================================================================== -->
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+    <section id="app" class="app container-fluid">
+        
+        <site-header></site-header>
+
+        <site-navigation></site-navigation>
+
+        <animated-fade-in>
+            <router-view></router-view>
+        </animated-fade-in>
+
+        <site-footer></site-footer>
+
+    </section>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
+
+<!--|== Scripts ================================================================================ -->
+<script>
+
+import SiteHeader from '@/components/layout/Header';
+import SiteNavigation from '@/components/layout/Navigation';
+import SiteFooter from '@/components/layout/Footer';
+
+export default {
+    name: 'app',
+
+    components: {
+        SiteHeader,
+        SiteNavigation,
+        SiteFooter,
     }
-  }
+    
 }
+</script>
+
+
+<!--|== CSS ==================================================================================== -->
+<style lang="scss">
+
+.app {
+
+}
+
 </style>
