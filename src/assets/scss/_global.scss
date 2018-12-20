@@ -16,6 +16,7 @@ body {
     box-sizing: border-box;
     background-color: $white;
     font-family: 'Open Sans Regular';
+    background-image: url('~@/assets/img/layout/bg.png');
     @extend .smooth;
 }
 

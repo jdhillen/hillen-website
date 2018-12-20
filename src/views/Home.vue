@@ -3,7 +3,7 @@
     <section class="home row">
 
         <div class="col-xs-12">
-            <img src="~@/assets/img/logo.png">
+            <h3>Coming in early 2019</h3>
         </div>
 
   </section>
@@ -66,6 +66,6 @@ export default {
 <!--|== CSS ==================================================================================== -->
 <style lang="scss">
 .home {
-    
+    text-align: center;
 }
 </style>

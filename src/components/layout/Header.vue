@@ -3,7 +3,7 @@
     <section class="header row">
                 
         <header class="col-xs-12">
-           <h1>Header Goes Here</h1>
+           <h1></h1>
         </header>
 
     </section>
