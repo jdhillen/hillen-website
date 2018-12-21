@@ -2,9 +2,7 @@
 <template>
     <section class="footer row">
         
-        <footer class="col-xs-12">
-           <h1></h1>
-        </footer>
+        <footer class="col-xs-12"></footer>
 
     </section>
 </template>

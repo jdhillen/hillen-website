@@ -2,9 +2,7 @@
 <template>
     <section class="header row">
                 
-        <header class="col-xs-12">
-           <h1></h1>
-        </header>
+        <header class="col-xs-12"></header>
 
     </section>
 </template>
@@ -25,6 +23,7 @@ export default {
 
 .header {
     text-align: center;
+    flex: 1;
 }
 
 </style>
