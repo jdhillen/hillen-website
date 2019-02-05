@@ -9,9 +9,22 @@ import './assets/js/sw'
 import AnimatedVue from 'animated-vue'
 import 'animate.css/animate.css'
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faCoffee, faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faGithub, faFacebook, faLinkedin, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon, FontAwesomeLayers, FontAwesomeLayersText } from '@fortawesome/vue-fontawesome'
+
 
 // ==|== AnimatedVue ===============================================================================
 Vue.use(AnimatedVue);
+
+
+// ==|== FontAwesome ===============================================================================
+library.add(faCoffee, faEnvelope, faGithub, faFacebook, faLinkedin, faInstagram, faTwitter )
+
+Vue.component('font-awesome-icon', FontAwesomeIcon);
+Vue.component('font-awesome-layers', FontAwesomeLayers);
+Vue.component('font-awesome-layers-text', FontAwesomeLayersText);
 
 
 // ==|== Create App ================================================================================

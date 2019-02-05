@@ -30,6 +30,56 @@ export default {
         SiteHeader,
         SiteNavigation,
         SiteFooter,
+    },
+
+    data() {
+        return {
+
+        };
+    },
+
+    beforeCreate() {
+        
+    },
+
+    created() {
+
+    },
+
+    beforeMount() {
+        this.$store.dispatch('getContact');
+    },
+
+    mounted() {
+
+    },
+
+    beforeUpdate() {
+
+    },
+
+    updated() {
+        
+    },
+
+    beforeDestroy() {
+        
+    },
+
+    destroyed() {
+
+    },
+
+    computed: {
+
+    },
+
+    methods: {
+
+    },
+
+    watch: {
+        
     }
     
 }

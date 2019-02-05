@@ -4,14 +4,19 @@ import Vapi from 'vuex-rest-api';
 
 // ==|== Get Photos ================================================================================
 const api = new Vapi({
-    baseURL: 'https://jsonplaceholder.typicode.com',
+    baseURL: 'http://www.jdhillen.io/api',
     state: {
-        users: []
+        about: [],
+        contact: []
     }
 }).get({
-    action: "getUsers",
-    property: "users",
-    path: "/users"
+    action: "getAbout",
+    property: "about",
+    path: "/resume/about/1/"
+}).get({
+    action: "getContact",
+    property: "contact",
+    path: "/resume/contact/1/"
 }).getStore();
 
 
