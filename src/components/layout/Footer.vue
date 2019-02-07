@@ -1,45 +1,45 @@
 <!--|== Template =============================================================================== -->
 <template>
-    <footer class="footer container-fluid">
+    <footer class="footer">
 
-        <div class="row">
-            <div class="footer__container col-xs-12">
+        <div class="footer__icons container-fluid">
+            <div class="col-xs-12">
                 <ul>
                     <li>
                         <a :href="contact.github" target="_blank">
-                            <font-awesome-icon :icon="[ 'fab', 'github' ]" size="2x"/>
+                            <font-awesome-icon :icon="[ 'fab', 'github' ]" class="footer__icon"/>
                         </a>
                     </li>
 
                     <li>
                         <a :href="contact.linkedin" target="_blank">
-                            <font-awesome-icon :icon="[ 'fab', 'linkedin' ]" size="2x"/>
+                            <font-awesome-icon :icon="[ 'fab', 'linkedin' ]" class="footer__icon"/>
                         </a>
                     </li>
 
                     <li>
                         <a :href="contact.facebook" target="_blank">
-                            <font-awesome-icon :icon="[ 'fab', 'facebook' ]" size="2x"/>
+                            <font-awesome-icon :icon="[ 'fab', 'facebook' ]" class="footer__icon"/>
                         </a>
                     </li>
 
                     <li>
                         <a :href="contact.twitter" target="_blank">
-                            <font-awesome-icon :icon="[ 'fab', 'twitter' ]" size="2x"/>
+                            <font-awesome-icon :icon="[ 'fab', 'twitter' ]" class="footer__icon"/>
                         </a>
                     </li>
 
                     <li>
                         <a :href="contact.instagram" target="_blank">
-                            <font-awesome-icon :icon="[ 'fab', 'instagram' ]" size="2x"/>
+                            <font-awesome-icon :icon="[ 'fab', 'instagram' ]" class="footer__icon"/>
                         </a>
                     </li>
 
                     <li>
                         <a :href="'mailto:' + contact.email + '?subject=Hello'">
-                            <font-awesome-layers full-width class="fa-2x">
+                            <font-awesome-layers full-width class="footer__icon">
                                 <font-awesome-icon icon="envelope"/>
-                                <span class="fa-layers-counter" style="background:Tomato; right:-5px;">1</span>
+                                <span class="fa-layers-counter" style="background:Tomato; right:-3px;">1</span>
                             </font-awesome-layers>
                         </a>
                     </li>
@@ -47,9 +47,10 @@
             </div>
         </div>
 
-        <div class="row">
-            <div class="footer__container col-xs-12">
-                <div>Made with <div class="icon icon__vue"></div> by J.D. Hillen</div>
+
+        <div class="footer__copyright container-fluid">
+            <div class="col-xs-12">
+                <div class=footer__copyright--txt>Made with <a href="https://vuejs.org/" target="_blank"><div class="icon icon__vue"></div></a> by J.D. Hillen</div>
             </div>
         </div>
 
@@ -71,7 +72,7 @@ export default {
 
     data() {
         return {
-            year: undefined,
+
         };
     },
 
@@ -84,7 +85,7 @@ export default {
     },
 
     beforeMount() {
-        this.year = new Date().getFullYear();
+
     },
 
     mounted() {
@@ -133,25 +134,46 @@ export default {
 <style lang="scss" scoped>
 
 .footer {
-    text-align: center;
+    width: 100%;
 
-    &__container {
+    &__icons {
+        text-align: center;
         padding: 20px 0;
+        background-color: black(0.70);
 
         ul {
             margin: 0;
             padding: 0;
 
             li {
-                padding: 0 10px;
+                padding: 0 20px;
                 display: inline;
 
                 a {
-                    color: black(0.75)
+                    color: white(0.25);
+                    transition: 300ms color;
+
+                    &:hover { color: $white; }
                 }
             }
         }
+    }
 
+    &__icon {
+        transform: scale(1.75);
+    }
+
+    &__copyright {
+        text-align: center;
+        padding: 50px 0;
+        background-color: black(0.8);
+
+        &--txt {
+            font-size: 8px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: $white;
+        }
     }
 }
 
