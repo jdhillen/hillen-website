@@ -1,13 +1,17 @@
 <!--|== Template =============================================================================== -->
 <template>
-    <section class="nav row">
-        
-        <nav class="col-xs-12">
-            <!-- <router-link to="/">Home</router-link> |
-            <router-link to="/about">About</router-link> -->
-        </nav>
+    <nav class="nav">
 
-    </section>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12">
+                    <!-- <router-link to="/">Home</router-link> |
+                    <router-link to="/about">About</router-link> -->
+                </div>
+            </div>
+        </div>
+        
+    </nav>
 </template>
 
 

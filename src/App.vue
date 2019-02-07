@@ -1,6 +1,6 @@
 <!--|== Template =============================================================================== -->
 <template>
-    <section id="app" class="app container-fluid">
+    <section id="app" class="app">
         
         <site-header></site-header>
 
@@ -90,7 +90,9 @@ export default {
 <style lang="scss">
 
 .app {
-    
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 </style>

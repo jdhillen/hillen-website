@@ -1,13 +1,13 @@
 <!--|== Template =============================================================================== -->
 <template>
-    <section class="home row center-xs">
+    <section class="home container-fluid">
 
-        <div class="home__fullwh col-xs-12">
+        <div class="home__fullwh">
             <img class="home__img" src="~@/assets/img/layout/code_coffee_metal.png" alt="Code Coffee Metal">
             <p>New site is under development.<br>Launching sometime in early 2019.</p>
         </div>
 
-  </section>
+    </section>
 </template>
 
 
@@ -67,10 +67,12 @@ export default {
 <!--|== CSS ==================================================================================== -->
 <style lang="scss">
 .home {
-    height: 100vh;
+    flex: 1;
     text-align: center;
 
     &__fullwh {
+        width: 100%;
+        height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;

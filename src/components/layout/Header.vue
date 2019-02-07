@@ -1,10 +1,12 @@
 <!--|== Template =============================================================================== -->
 <template>
-    <section class="header row">
-                
-        <header class="col-xs-12"></header>
+    <header class="header container-fluid">
 
-    </section>
+        <div class="row">
+            <div class="col-xs-12"></div>
+        </div>
+        
+    </header>
 </template>
 
 
@@ -22,8 +24,8 @@ export default {
 <style lang="scss" scoped>
 
 .header {
+    height: 100px;
     text-align: center;
-    flex: 1;
 }
 
 </style>

@@ -4,7 +4,7 @@ import Vapi from 'vuex-rest-api';
 
 // ==|== Get Photos ================================================================================
 const api = new Vapi({
-    baseURL: 'http://www.jdhillen.io/api',
+    baseURL: 'https://www.jdhillen.io/api',
     state: {
         about: [],
         contact: []
