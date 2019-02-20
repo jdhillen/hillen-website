@@ -36,7 +36,7 @@
                     <h1>Technical Skills</h1>
                     <div v-for="(title, index) in skills">
                         <h3>{{index}}</h3>
-                        <span v-for="skill in title">{{skill.name}}, </span>    
+                        <span v-for="skill in title">{{skill.name}}, </span>
                     </div>
                 </div>
             </div>
@@ -206,6 +206,9 @@ export default {
 
 .resume {
     
+    h1 {
+        font-family: 'Raleway Regular';
+    }
 }
 
 </style>

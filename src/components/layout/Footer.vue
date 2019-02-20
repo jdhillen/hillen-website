@@ -169,8 +169,9 @@ export default {
         background-color: black(0.8);
 
         &--txt {
+            font-family: 'Lato Hairline';
             font-size: 8px;
-            letter-spacing: 3px;
+            letter-spacing: 2px;
             text-transform: uppercase;
             color: $white;
         }

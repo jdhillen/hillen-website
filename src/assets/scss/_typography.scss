@@ -2,6 +2,8 @@
 // ---- Typography ----
 // =================================================================================================
 
+
+// ==|== Open Sans =================================================================================
 @font-face {
     font-family: 'Open Sans Light';
     src: url('~@/assets/fonts/open-sans/Open_Sans_Light.woff2') format('woff2');
@@ -17,6 +19,155 @@
     src: url('~@/assets/fonts/open-sans/Open_Sans_Bold.woff2') format('woff2');
 }
 
+
+
+// ==|== Lato ======================================================================================
+@font-face {
+    font-family: 'Lato Black';
+    src: url('~@/assets/fonts/lato/Lato-Black.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Lato Black Italic';
+    src: url('~@/assets/fonts/lato/Lato-BlackItalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Lato Bold';
+    src: url('~@/assets/fonts/lato/Lato-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Lato Bold Italic';
+    src: url('~@/assets/fonts/lato/Lato-BoldItalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Lato Hairline';
+    src: url('~@/assets/fonts/lato/Lato-Hairline.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Lato Hairline Italic';
+    src: url('~@/assets/fonts/lato/Lato-HairlineItalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Lato Italic';
+    src: url('~@/assets/fonts/lato/Lato-Italic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Lato Light';
+    src: url('~@/assets/fonts/lato/Lato-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Lato Light Italic';
+    src: url('~@/assets/fonts/lato/Lato-LightItalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Lato Regular';
+    src: url('~@/assets/fonts/lato/Lato-Regular.ttf') format('truetype');
+}
+
+
+
+// ==|== Raleway ===================================================================================
+@font-face {
+    font-family: 'Raleway Black';
+    src: url('~@/assets/fonts/raleway/Raleway-Black.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Raleway Black Italic';
+    src: url('~@/assets/fonts/raleway/Raleway-BlackItalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Raleway Bold';
+    src: url('~@/assets/fonts/raleway/Raleway-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Raleway Bold Italic';
+    src: url('~@/assets/fonts/raleway/Raleway-BoldItalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Raleway Extra Bold';
+    src: url('~@/assets/fonts/raleway/Raleway-ExtraBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Raleway Extra Bold Italic';
+    src: url('~@/assets/fonts/raleway/Raleway-ExtraBoldItalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Raleway Extra Light';
+    src: url('~@/assets/fonts/raleway/Raleway-ExtraLight.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Raleway Extra Light Italic';
+    src: url('~@/assets/fonts/raleway/Raleway-ExtraLightItalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Raleway Italic';
+    src: url('~@/assets/fonts/raleway/Raleway-Italic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Raleway Light';
+    src: url('~@/assets/fonts/raleway/Raleway-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Raleway Light Italic';
+    src: url('~@/assets/fonts/raleway/Raleway-LightItalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Raleway Medium';
+    src: url('~@/assets/fonts/raleway/Raleway-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Raleway Medium Italic';
+    src: url('~@/assets/fonts/raleway/Raleway-MediumItalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Raleway Regular';
+    src: url('~@/assets/fonts/raleway/Raleway-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Raleway Semi Bold';
+    src: url('~@/assets/fonts/raleway/Raleway-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Raleway Semi Bold Italic';
+    src: url('~@/assets/fonts/raleway/Raleway-SemiBoldItalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Raleway Thin';
+    src: url('~@/assets/fonts/raleway/Raleway-Thin.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Raleway Thin Italic';
+    src: url('~@/assets/fonts/raleway/Raleway-ThinItalic.ttf') format('truetype');
+}
+
+
+
+// ==|== Helper Classes ============================================================================
 .smooth {
     -webkit-text-stroke: 0.35px;
     -webkit-font-smoothing: antialiased;
