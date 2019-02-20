@@ -7,7 +7,8 @@ const api = new Vapi({
     baseURL: 'https://www.jdhillen.io/api',
     state: {
         about: [],
-        contact: []
+        contact: [],
+        resume: [],
     }
 }).get({
     action: "getAbout",
@@ -17,6 +18,10 @@ const api = new Vapi({
     action: "getContact",
     property: "contact",
     path: "/resume/contact/1/"
+}).get({
+    action: "getResume",
+    property: "resume",
+    path: "/resume/"
 }).getStore();
 
 

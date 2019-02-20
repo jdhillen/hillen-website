@@ -3,9 +3,8 @@
 // =================================================================================================
 
 .page {
-    width: $appWidth;
-    height: $appHeight;
-    padding: 50px;
+    box-sizing: border-box;
+    max-width: 1200px;
 
     &__headline {
         text-align: center;
