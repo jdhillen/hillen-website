@@ -1,10 +1,12 @@
 <!--|== Template =============================================================================== -->
 <template>
-    <section class="home container-fluid">
+    <section class="home">
 
-        <div class="home__fullwh">
-            <img class="home__img" src="~@/assets/img/layout/code_coffee_metal.png" alt="Code Coffee Metal">
-            <p>New site is under development.<br>Launching sometime in early 2019.</p>
+        <div class="grid-container">
+            <div class="home__fullwh">
+                <img class="home__img" src="~@/assets/img/layout/code_coffee_metal.png" alt="Code Coffee Metal">
+                <p>New site is under development.<br>Launching sometime in early 2019.</p>
+            </div>
         </div>
 
     </section>

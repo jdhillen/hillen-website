@@ -1,10 +1,12 @@
 <!--|== Template =============================================================================== -->
 <template>
-    <section class="page container-fluid about">
-
-        <div class="row">
-            <div class="col-xs">
-                <h1>This is an about page</h1>
+    <section class="page about">
+       
+        <div class="grid-container">
+            <div class="grid-x">
+                <div class="cell small-12">
+                    <h1>This is an about page</h1>
+                </div>
             </div>
         </div>
 

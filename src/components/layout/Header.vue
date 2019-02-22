@@ -1,9 +1,9 @@
 <!--|== Template =============================================================================== -->
 <template>
-    <header class="header container-fluid">
+    <header class="header grid-container fluid">
 
-        <div class="row">
-            <div class="col-xs-12"></div>
+        <div class="grid-x">
+            <div class="cell"></div>
         </div>
         
     </header>

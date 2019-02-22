@@ -2,9 +2,9 @@
 <template>
     <nav class="nav">
 
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-xs-12">
+        <div class="grid-container">
+            <div class="grid-x">
+                <div class="cell">
                     <router-link to="/">Home</router-link>
                     <router-link to="/about">About</router-link>
                     <router-link to="/resume">Resume</router-link>

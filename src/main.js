@@ -9,6 +9,10 @@ import './assets/js/sw'
 import AnimatedVue from 'animated-vue'
 import 'animate.css/animate.css'
 
+import './../node_modules/jquery/dist/jquery.min.js';
+import './../node_modules/foundation-sites/dist/css/foundation.min.css';
+import './../node_modules/foundation-sites/dist/js/foundation.min.js';
+
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faFacebook, faLinkedin, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons'

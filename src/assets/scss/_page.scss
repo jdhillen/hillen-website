@@ -3,8 +3,7 @@
 // =================================================================================================
 
 .page {
-    box-sizing: border-box;
-    max-width: 1200px;
+    background-image: url('~@/assets/img/layout/bg.png');
 
     &__headline {
         text-align: center;

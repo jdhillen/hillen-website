@@ -2,8 +2,8 @@
 <template>
     <footer class="footer">
 
-        <div class="footer__icons container-fluid">
-            <div class="col-xs-12">
+        <div class="footer__icons grid-container fluid">
+            <div class="cell small-12">
                 <ul>
                     <li>
                         <a :href="contact.github" target="_blank">
@@ -48,8 +48,8 @@
         </div>
 
 
-        <div class="footer__copyright container-fluid">
-            <div class="col-xs-12">
+        <div class="footer__copyright grid-container fluid">
+            <div class="cell small-12">
                 <div class=footer__copyright--txt>Made with <a href="https://vuejs.org/" target="_blank"><div class="icon icon__vue"></div></a> by J.D. Hillen</div>
             </div>
         </div>
