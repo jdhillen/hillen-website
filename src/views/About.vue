@@ -4,7 +4,7 @@
        
         <div class="grid-container">
             <div class="grid-x">
-                <div class="cell small-12">
+                <div class="cell">
                     <h1>This is an about page</h1>
                 </div>
             </div>

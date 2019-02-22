@@ -3,8 +3,8 @@
     <section class="page resume">
 
         <div class="grid-container">
-            <section class="resume__contact grid-x">
-                <div class="cell small-12">
+            <div class="resume__contact grid-x">
+                <div class="cell">
                     <h1>Contact</h1>
                     <div class="resume__contact--name">{{contact.name }}</div>
                     <div class="resume__contact--title">{{contact.title }}</div>
@@ -18,20 +18,20 @@
                         <a :href="'tel:' + contact.phone">{{contact.phone}}</a>
                     </div>
                 </div>
-            </section>
+            </div>
 
-            <section class="resume__about">
+            <div class="resume__about">
                 <div class="grid-x">
-                    <div class="cell small-12">
+                    <div class="cell">
                         <h1>Intro</h1>
                         <div class="resume__about--intro" v-html="about.intro"></div>
                     </div>
                 </div>
-            </section>
+            </div>
 
-            <section class="resume__skills">
+            <div class="resume__skills">
                 <div class="grid-x">
-                    <div class="cell small-12">
+                    <div class="cell">
                         <h1>Technical Skills</h1>
                         <div v-for="(title, index) in skills">
                             <h3>{{index}}</h3>
@@ -39,11 +39,11 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
 
-            <section class="resume__education">
+            <div class="resume__education">
                 <div class="grid-x">
-                    <div class="cell small-12">
+                    <div class="cell">
                         <h1>Education</h1>
                         <div class="resume__education--photo">
                             <img v-bind:src="education.school_photo" />
@@ -58,20 +58,20 @@
                         <div class="resume__education--description" v-html="education.description"></div>
                     </div>
                 </div>
-            </section>
+            </div>
 
-            <section class="resume__awards">
+            <div class="resume__awards">
                 <div class="grid-x">
-                    <div class="cell small-12">
+                    <div class="cell">
                         <h1>Awards</h1>
                         <div class="resume__awards--award" v-for="award in awards">{{award.name}} - {{award.description}} - {{award.year}}</div>
                     </div>
                 </div>
-            </section>
+            </div>
 
-            <section class="resume__experience">
+            <div class="resume__experience">
                 <div class="grid-x">
-                    <div class="cell small-12">
+                    <div class="cell">
                         <h1>Experience</h1>
                         <div class="resume__experience--job" v-for="job in jobs">
                             <div class="resume__experience--photo">
@@ -84,11 +84,11 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
 
-            <section class="resume__references">
+            <div class="resume__references">
                 <div class="grid-x">
-                    <div class="cell small-12">
+                    <div class="cell">
                         <h1>References</h1>
                         <div class="resume__references--reference" v-for="reference in references">
                             <h3>{{reference.first_name}} {{reference.last_name}}</h3>
@@ -103,7 +103,7 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
         </div>
 
     </section>

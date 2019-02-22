@@ -1,9 +1,11 @@
 <!--|== Template =============================================================================== -->
 <template>
-    <header class="header grid-container fluid">
+    <header class="header">
 
-        <div class="grid-x">
-            <div class="cell"></div>
+        <div class="grid-container">
+            <div class="grid-x">
+                <div class="cell"></div>
+            </div>
         </div>
         
     </header>
@@ -24,7 +26,6 @@ export default {
 <style lang="scss" scoped>
 
 .header {
-    height: 100px;
     text-align: center;
 }
 

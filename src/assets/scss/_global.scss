@@ -17,7 +17,7 @@ body {
     height: 100%;
     box-sizing: border-box;
     background-color: $white;
-    font-family: 'Lato Light';
+    font-family: 'Lato Light' !important;
     font-size: 14px;
     font-style: normal;
     @extend .smooth;
