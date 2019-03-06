@@ -2,16 +2,18 @@
 <template>
     <nav class="nav">
 
-        <button class="hamburger hamburger--squeeze" :class="{ 'is-active': isActive }" @click="toggleNav()" type="button">
-            <span class="hamburger-box">
-                <span class="hamburger-inner"></span>
-            </span>
-        </button>
+        <div class="nav__container">
+            <button class="hamburger hamburger--squeeze" :class="{ 'is-active': isActive }" @click="toggleNav()" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+        </div>
 
-        <div class="nav__container" :class="{ 'is-active': isActive }">
-            <router-link to="/" @click.native="toggleNav()">Home</router-link>
-            <router-link to="/about" @click.native="toggleNav()">About</router-link>
-            <router-link to="/resume" @click.native="toggleNav()">Resume</router-link>
+        <div class="nav__wrapper" :class="{ 'is-active': isActive }">
+            <router-link class="nav__item" to="/" @click.native="toggleNav()">Home</router-link>
+            <router-link class="nav__item" to="/about" @click.native="toggleNav()">About</router-link>
+            <router-link class="nav__item" to="/resume" @click.native="toggleNav()">Resume</router-link>
         </div>
         
     </nav>
@@ -92,7 +94,6 @@ export default {
 
 .nav {
     position: relative;
-    text-align: center;
 
     .hamburger {
         position: absolute;
@@ -116,6 +117,12 @@ export default {
     }
 
     &__container {
+        width: 100%;
+        height: 75px;
+        background-color: $white;
+    }
+
+    &__wrapper {
         position: absolute;
         top: 0;
         left: 0;
@@ -126,6 +133,7 @@ export default {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
         visibility: hidden;
         opacity: 0;
         transition: opacity 0.25s;
@@ -135,6 +143,14 @@ export default {
             visibility: visible;
             opacity: 1;
         }
+    }
+
+    &__item {
+        color: $white;
+        text-transform: uppercase;
+        font-family: 'Lato Black';
+        font-size: 50px;
+        letter-spacing: 4px;
     }
 }
 
