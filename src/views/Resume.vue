@@ -3,94 +3,108 @@
     <section class="page resume">
 
         <div class="grid-container">
-            <div class="resume__contact grid-x">
-                <div class="cell">
-                    <h1>Contact</h1>
-                    <div class="resume__contact--name">{{contact.name }}</div>
-                    <div class="resume__contact--title">{{contact.title }}</div>
-                    <div class="resume__contact--website">
-                        <a :href="contact.website">{{contact.website}}</a>
-                    </div>
-                    <div class="resume__contact--email">
-                        <a :href="'mailto:' + contact.email" target="_blank">{{contact.email}}</a>
-                    </div>
-                    <div class="resume__contact--phone">
-                        <a :href="'tel:' + contact.phone">{{contact.phone}}</a>
+            <article class="contact">
+                <div class="gird-x">
+                    <div class="cell">
+                        <h1>Contact</h1>
+                        <div class="contact--name">{{contact.name }}</div>
+                        <div class="contact--title">{{contact.title }}</div>
+                        <div class="contact--website">
+                            <a :href="contact.website">{{contact.website}}</a>
+                        </div>
+                        <div class="contact--email">
+                            <a :href="'mailto:' + contact.email" target="_blank">{{contact.email}}</a>
+                        </div>
+                        <div class="contact--phone">
+                            <a :href="'tel:' + contact.phone">{{contact.phone}}</a>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </article>
 
-            <div class="resume__about">
+            <article class="about">
                 <div class="grid-x">
                     <div class="cell">
                         <h1>Intro</h1>
-                        <div class="resume__about--intro" v-html="about.intro"></div>
+                        <div class="about--intro" v-html="about.intro"></div>
                     </div>
                 </div>
-            </div>
+            </article>
 
-            <div class="resume__skills">
+            <article class="skills">
                 <div class="grid-x">
                     <div class="cell">
                         <h1>Technical Skills</h1>
-                        <div v-for="(title, index) in skills">
+                        <div v-for="(title, index) in skills" :key="index">
                             <h3>{{index}}</h3>
-                            <span v-for="skill in title">{{skill.name}}, </span>
+                            <span v-for="(skill, index) in title" :key="index">{{skill.name}}, </span>
                         </div>
                     </div>
                 </div>
-            </div>
+            </article>
 
-            <div class="resume__education">
+            <article class="education">
                 <div class="grid-x">
                     <div class="cell">
                         <h1>Education</h1>
-                        <div class="resume__education--photo">
-                            <img v-bind:src="education.school_photo" />
+                        <div class="grid-x education">
+                            <div class="cell small-2 medium-2">
+                                <img class="thumbnail education--photo" v-bind:src="education.school_photo" />
+                            </div>
+                            <div class="cell small-12 medium-9">
+                                <div class="education--school">{{education.school}}</div>
+                                <div class="education--degree">{{education.degree}}</div>
+                                <div class="education--field_of_study">{{education.field_of_study}}</div>
+                                <div class="education--gpa">{{education.gpa}}</div>
+                                <div class="education--start">{{education.date_start}}</div>
+                                <div class="education--end">{{education.date_end}}</div>
+                                <div class="education--activities">{{education.activities}}</div>
+                                <div class="education--description" v-html="education.description"></div>
+                            </div>
                         </div>
-                        <div class="resume__education--school">{{education.school}}</div>
-                        <div class="resume__education--degree">{{education.degree}}</div>
-                        <div class="resume__education--field_of_study">{{education.field_of_study}}</div>
-                        <div class="resume__education--gpa">{{education.gpa}}</div>
-                        <div class="resume__education--start">{{education.date_start}}</div>
-                        <div class="resume__education--end">{{education.date_end}}</div>
-                        <div class="resume__education--activities">{{education.activities}}</div>
-                        <div class="resume__education--description" v-html="education.description"></div>
                     </div>
                 </div>
-            </div>
+            </article>
 
-            <div class="resume__awards">
+            <article class="awards">
                 <div class="grid-x">
                     <div class="cell">
                         <h1>Awards</h1>
-                        <div class="resume__awards--award" v-for="award in awards">{{award.name}} - {{award.description}} - {{award.year}}</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="resume__experience">
-                <div class="grid-x">
-                    <div class="cell">
-                        <h1>Experience</h1>
-                        <div class="resume__experience--job" v-for="job in jobs">
-                            <div class="resume__experience--photo">
-                                <img v-bind:src="job.photo" />
-                            </div>
-                            <h3>{{job.company}}</h3>
-                            <div>{{job.title}}</div>
-                            <div>{{job.date_start}} - {{job.date_end}}</div>
-                            <div v-html="job.description"></div>
+                        <div class="award" v-for="award in awards" :key="award.id">
+                            <div class="award--name">{{award.name}}</div>
+                            <div class="award--description">{{award.description}}</div>
+                            <div class="award--year">{{award.year}}</div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </article>
 
-            <div class="resume__references">
+            <article class="experience">
+                <div class="grid-x">
+                    <div class="cell">
+                        <h1>Experience</h1>
+
+                        <div class="grid-x experience--job" v-for="job in jobs" :key="job.id">
+                            <div class="cell small-2 medium-2">
+                                <img class="thumbnail" v-bind:src="job.photo" />
+                            </div>
+                            <div class="cell small-12 medium-9">
+                                <h3>{{job.company}}</h3>
+                                <div>{{job.title}}</div>
+                                <div>{{job.date_start}} - {{job.date_end}}</div>
+                                <div v-html="job.description"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </article>
+
+            <article class="references">
                 <div class="grid-x">
                     <div class="cell">
                         <h1>References</h1>
-                        <div class="resume__references--reference" v-for="reference in references">
+                        <div class="references--reference" v-for="reference in references"  :key="reference.id">
                             <h3>{{reference.first_name}} {{reference.last_name}}</h3>
                             <div>{{reference.title}}</div>
                             <div>{{reference.company}}</div>
@@ -103,7 +117,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </article>
         </div>
 
     </section>
@@ -176,8 +190,6 @@ export default {
             resume: state => state.api.resume,
         }),
 
-        
-
     },
 
     methods: {
@@ -205,6 +217,10 @@ export default {
 <style lang="scss">
 
 .resume {
+
+    article {
+        
+    }
     
     h1 {
         font-family: 'Raleway Regular';

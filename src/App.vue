@@ -39,7 +39,7 @@ export default {
     },
 
     beforeCreate() {
-        
+        this.$store.dispatch('getContact');
     },
 
     created() {
@@ -47,7 +47,7 @@ export default {
     },
 
     beforeMount() {
-        this.$store.dispatch('getContact');
+        
     },
 
     mounted() {
