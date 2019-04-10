@@ -154,6 +154,7 @@ export default {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        visibility: hidden;
         opacity: 0;
         -webkit-transition: opacity 0.25s;
         -o-transition: opacity 0.25s;
