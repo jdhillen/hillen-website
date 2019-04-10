@@ -135,11 +135,12 @@ export default {
 
 .footer {
     width: 100%;
+    z-index: 100;
 
     &__icons {
         text-align: center;
         padding: 20px 0;
-        background-color: black(0.70);
+        background-color: $grey-light;
 
         ul {
             margin: 0;
@@ -166,7 +167,7 @@ export default {
     &__copyright {
         text-align: center;
         padding: 50px 0;
-        background-color: black(0.8);
+        background-color: $grey-dark;
 
         &--txt {
             font-family: 'Lato Hairline';

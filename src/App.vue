@@ -1,13 +1,11 @@
 <!--|== Template =============================================================================== -->
 <template>
     <section id="app" class="app">
-        
-        <site-header></site-header>
 
-        <site-navigation></site-navigation>
+        <site-navigation @nav="onNav"></site-navigation>
 
         <animated-fade-in>
-            <router-view></router-view>
+            <router-view class="page" :class="{ 'blur': blurActive }"></router-view>
         </animated-fade-in>
 
         <site-footer></site-footer>
@@ -19,7 +17,6 @@
 <!--|== Scripts ================================================================================ -->
 <script>
 
-import SiteHeader from '@/components/layout/Header';
 import SiteNavigation from '@/components/layout/Navigation';
 import SiteFooter from '@/components/layout/Footer';
 
@@ -27,14 +24,13 @@ export default {
     name: 'app',
 
     components: {
-        SiteHeader,
         SiteNavigation,
         SiteFooter,
     },
 
     data() {
         return {
-
+            blurActive: false,
         };
     },
 
@@ -75,7 +71,9 @@ export default {
     },
 
     methods: {
-
+        onNav(value) {
+            this.blurActive = value;
+        }
     },
 
     watch: {
@@ -90,7 +88,7 @@ export default {
 <style lang="scss">
 
 .app {
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
 }

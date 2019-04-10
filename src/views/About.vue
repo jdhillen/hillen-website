@@ -1,6 +1,6 @@
 <!--|== Template =============================================================================== -->
 <template>
-    <section class="page about">
+    <section class="about">
        
         <div class="grid-container">
             <div class="grid-x">

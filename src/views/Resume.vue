@@ -1,6 +1,6 @@
 <!--|== Template =============================================================================== -->
 <template>
-    <section class="page resume">
+    <section class="resume">
 
         <article class="grid-container contact">
             <div class="gird-x">

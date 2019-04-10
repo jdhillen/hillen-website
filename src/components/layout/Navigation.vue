@@ -10,7 +10,7 @@
             </button>
         </div>
 
-        <div class="nav__wrapper" :class="{ 'is-active': isActive }">
+        <div ref="links" class="nav__wrapper" :class="{ 'is-active': isActive }">
             <router-link class="nav__item" to="/" @click.native="toggleNav()">Home</router-link>
             <router-link class="nav__item" to="/about" @click.native="toggleNav()">About</router-link>
             <router-link class="nav__item" to="/resume" @click.native="toggleNav()">Resume</router-link>
@@ -22,6 +22,8 @@
 
 <!--|== Scripts ================================================================================ -->
 <script>
+
+import {TweenMax, Back} from "gsap/TweenMax";
 
 export default {
     name: 'site-navigation',
@@ -49,7 +51,7 @@ export default {
     },
 
     mounted() {
-       
+    
     },
 
     beforeUpdate() {
@@ -76,7 +78,22 @@ export default {
 
         toggleNav: function() {
             this.isActive = !this.isActive;
+            if (this.isActive) { 
+                this.animateIn();
+            } else {
+                this.animateOut();
+            }
         },
+
+        animateIn: function() {
+            TweenMax.staggerTo(this.$refs.links.children, 0.35, {top:"0px", autoAlpha:1, ease:Back.easeOut.config(1.5)}, 0.1);
+            this.$emit('nav', this.isActive);
+         },
+
+        animateOut: function() {
+            TweenMax.set(this.$refs.links.children, { top:"50px", autoAlpha:0 });
+            this.$emit('nav', this.isActive);
+        }
 
     },
 
@@ -90,16 +107,19 @@ export default {
 
 
 <!--|== CSS ==================================================================================== -->
-<style lang="scss" scoped>
+<style lang="scss">
 
 .nav {
-    position: relative;
+    position: fixed;
+    width: 100%;
+    height: 75px;
+    z-index: 200;
 
     .hamburger {
         position: absolute;
         top: 10px;
         right: 10px;
-        z-index: 200;
+        z-index: 1000;
 
         &-inner,
         &-inner::before,
@@ -119,7 +139,6 @@ export default {
     &__container {
         width: 100%;
         height: 75px;
-        background-color: $white;
     }
 
     &__wrapper {
@@ -127,17 +146,18 @@ export default {
         top: 0;
         left: 0;
         width: 100%;
-        height: 100vh;
+        height: 100vh; 
         background-color: black(0.75);
-        z-index: 100;
+        z-index: 900;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        visibility: hidden;
         opacity: 0;
-        transition: opacity 0.25s;
         -webkit-transition: opacity 0.25s;
+        -o-transition: opacity 0.25s;
+        transition: opacity 0.25s;
+        
 
         &.is-active {
             visibility: visible;
@@ -151,7 +171,9 @@ export default {
         font-family: 'Lato Black';
         font-size: 50px;
         letter-spacing: 4px;
+        @extend %nav-links-animate;
     }
+
 }
 
 </style>
