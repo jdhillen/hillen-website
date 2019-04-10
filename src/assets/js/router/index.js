@@ -23,6 +23,11 @@ export default new Router({
       component: require('@/views/About').default
     },
     {
+      path: '/work',
+      name: 'work',
+      component: require('@/views/Work').default
+    },
+    {
       path: '/resume',
       name: 'resume',
       component: require('@/views/Resume').default

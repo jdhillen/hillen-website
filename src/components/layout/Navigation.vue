@@ -13,6 +13,7 @@
         <div ref="links" class="nav__wrapper" :class="{ 'is-active': isActive }">
             <router-link class="nav__item" to="/" @click.native="toggleNav()">Home</router-link>
             <router-link class="nav__item" to="/about" @click.native="toggleNav()">About</router-link>
+            <router-link class="nav__item" to="/work" @click.native="toggleNav()">Work</router-link>
             <router-link class="nav__item" to="/resume" @click.native="toggleNav()">Resume</router-link>
         </div>
         
@@ -156,7 +157,7 @@ export default {
         opacity: 0;
         -webkit-transition: opacity 0.25s;
         -o-transition: opacity 0.25s;
-        transition: opacity 0.25s;
+        transition: opacity 0.5s;
         
 
         &.is-active {

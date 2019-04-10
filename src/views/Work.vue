@@ -1,6 +1,6 @@
 <!--|== Template =============================================================================== -->
 <template>
-    <section class="about">
+    <section class="work">
        
         <div class="grid-container">
             <div class="grid-x">
@@ -18,7 +18,7 @@
 <script>
 
 export default {
-    name: 'about-page',
+    name: 'work-page',
 
     components: {
 
@@ -80,7 +80,7 @@ export default {
 <!--|== CSS ==================================================================================== -->
 <style lang="scss">
 
-.about {
+.work {
 
 }
 

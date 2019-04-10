@@ -8,7 +8,7 @@
             <router-view class="page" :class="{ 'blur': blurActive }"></router-view>
         </animated-fade-in>
 
-        <site-footer></site-footer>
+        <site-footer :class="{ 'blur': blurActive }"></site-footer>
 
     </section>
 </template>

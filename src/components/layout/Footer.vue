@@ -166,7 +166,7 @@ export default {
 
     &__copyright {
         text-align: center;
-        padding: 50px 0;
+        padding: 30px 0;
         background-color: $grey-dark;
 
         &--txt {
