@@ -35,7 +35,7 @@ export default {
     },
 
     beforeCreate() {
-        this.$store.dispatch('getContact');
+        this.$store.dispatch('api/fetchContact');
     },
 
     created() {

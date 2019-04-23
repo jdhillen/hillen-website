@@ -6,13 +6,14 @@
 
 
 // ==|== Imports ===================================================================================
-@import 'normalize';
+@import 'vendor/normalize';
+@import 'vendor/skeleton';
+@import 'vendor/nprogress';
 @import 'colors';
 @import 'mixins';
 @import 'typography';
 @import 'animations';
 @import 'global';
-@import 'skeleton';
 @import 'icons';
 @import 'page';
 @import "node_modules/hamburgers/_sass/hamburgers/hamburgers";

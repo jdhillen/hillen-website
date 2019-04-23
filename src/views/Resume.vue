@@ -126,6 +126,8 @@
 <script>
 
 import { mapState } from 'vuex';
+import NProgress from 'nprogress';
+import store from '@/assets/js/store';
 import _ from 'underscore';
 
 export default {
@@ -147,15 +149,20 @@ export default {
         };
     },
 
+    beforeRouteEnter(routeTo, routeFrom, next) {
+        NProgress.start()
+        store.dispatch('api/fetchResume').then(() => {
+          NProgress.done() 
+          next() // Only once this is called does the navigation continue
+        })
+    },
+
     beforeCreate() {
-        this.$store.dispatch('getResume')
-            .then( () => {
-                this.sortResume();
-            });
+
     },
 
     created() {
-
+        this.sortResume();
     },
 
     beforeMount() {
