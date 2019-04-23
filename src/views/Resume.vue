@@ -1,6 +1,6 @@
 <!--|== Template =============================================================================== -->
 <template>
-    <section class="resume">
+    <section class="resume" v-if='resume'>
 
         <article class="grid-container contact">
             <div class="gird-x">
