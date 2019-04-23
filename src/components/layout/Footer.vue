@@ -1,6 +1,6 @@
 <!--|== Template =============================================================================== -->
 <template>
-    <footer class="footer">
+    <footer class="footer" v-if='contact'>
 
         <div class="footer__icons grid-container fluid">
             <div class="cell small-12">
