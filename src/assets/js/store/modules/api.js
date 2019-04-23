@@ -37,7 +37,8 @@ var api = {
         fetchResume({ commit }) {
             return Service.getResume()
                 .then(response => {
-                    commit('SET_RESUME', response.data)
+                    commit('SET_RESUME', response.data);
+                    return response.data;
                 })
         },
     

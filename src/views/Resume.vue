@@ -125,9 +125,6 @@
 <!--|== Scripts ================================================================================ -->
 <script>
 
-import { mapState } from 'vuex';
-import NProgress from 'nprogress';
-import store from '@/assets/js/store';
 import _ from 'underscore';
 
 export default {
@@ -135,6 +132,13 @@ export default {
 
     components: {
 
+    },
+
+    props: {
+        resume: {
+            type: Object,
+            required: true,
+        }
     },
 
     data() {
@@ -147,14 +151,6 @@ export default {
             jobs: [],
             references: [],
         };
-    },
-
-    beforeRouteEnter(routeTo, routeFrom, next) {
-        NProgress.start()
-        store.dispatch('api/fetchResume').then(() => {
-          NProgress.done() 
-          next() // Only once this is called does the navigation continue
-        })
     },
 
     beforeCreate() {
@@ -190,10 +186,6 @@ export default {
     },
 
     computed: {
-
-        ...mapState({
-            resume: state => state.api.resume,
-        }),
 
     },
 
