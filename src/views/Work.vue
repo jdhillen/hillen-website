@@ -2,9 +2,9 @@
 <template>
     <section class="work">
        
-        <div class="grid-container">
-            <div class="grid-x">
-                <div class="cell">
+        <div class="container">
+            <div class="row">
+                <div class="twelve columns">
                     <h1>Coming Soon</h1>
                 </div>
             </div>
