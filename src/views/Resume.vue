@@ -5,7 +5,7 @@
         <article class="container contact">
             <div class="row">
                 <div class="twelve columns">
-                    <h1>Contact</h1>
+                    <h4>Contact</h4>
                     <div class="contact--name">{{contact.name }}</div>
                     <div class="contact--title">{{contact.title }}</div>
                     <div class="contact--website">
@@ -24,7 +24,7 @@
         <article class=" container about">
             <div class="row">
                 <div class="twelve columns">
-                    <h1>Intro</h1>
+                    <h4>Intro</h4>
                     <div class="about--intro" v-html="about.intro"></div>
                 </div>
             </div>
@@ -33,9 +33,9 @@
         <article class="container skills">
             <div class="row">
                 <div class="twelve columns">
-                    <h1>Technical Skills</h1>
+                    <h4>Technical Skills</h4>
                     <div v-for="(title, index) in skills" :key="index">
-                        <h3>{{index}}</h3>
+                        <h5>{{index}}</h5>
                         <span v-for="(skill, index) in title" :key="index">{{skill.name}}, </span>
                     </div>
                 </div>
@@ -45,7 +45,7 @@
         <article class="container education">
             <div class="row">
                 <div class="twelve columns">
-                    <h1>Education</h1>
+                    <h4>Education</h4>
                     <div class="row education">
                         <div class="two columns">
                             <img class="thumbnail education--photo" v-bind:src="education.school_photo" />
@@ -68,7 +68,7 @@
         <article class="container awards">
             <div class="row">
                 <div class="twelve columns">
-                    <h1>Awards</h1>
+                    <h4>Awards</h4>
                     <div class="award" v-for="award in awards" :key="award.id">
                         <div class="award--name">{{award.name}}</div>
                         <div class="award--description">{{award.description}}</div>
@@ -81,14 +81,14 @@
         <article class="container experience">
             <div class="row">
                 <div class="twelve columns">
-                    <h1>Experience</h1>
+                    <h4>Experience</h4>
 
                     <div class="row experience--job" v-for="job in jobs" :key="job.id">
                         <div class="two columns">
                             <img class="thumbnail" v-bind:src="job.photo" />
                         </div>
                         <div class="ten columns">
-                            <h3>{{job.company}}</h3>
+                            <h5>{{job.company}}</h5>
                             <div>{{job.title}}</div>
                             <div>{{job.date_start}} - {{job.date_end}}</div>
                             <div v-html="job.description"></div>
@@ -102,9 +102,9 @@
         <article class="container references">
             <div class="row">
                 <div class="twelve columns">
-                    <h1>References</h1>
+                    <h4>References</h4>
                     <div class="references--reference" v-for="reference in references"  :key="reference.id">
-                        <h3>{{reference.first_name}} {{reference.last_name}}</h3>
+                        <div>{{reference.first_name}} {{reference.last_name}}</div>
                         <div>{{reference.title}}</div>
                         <div>{{reference.company}}</div>
                         <div>
@@ -224,7 +224,7 @@ export default {
     .references {
         margin-bottom: 25px;
 
-        h1 { font-family: 'Raleway Regular'; }
+        h4 { font-family: 'Raleway Regular'; }
     }
 
     .contact {
