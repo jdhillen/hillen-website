@@ -1,138 +1,112 @@
 <!--|== Template =============================================================================== -->
 <template>
-    <footer class="footer" v-if='contact'>
-
-        <div class="footer__icons grid-container fluid">
-            <div class="cell small-12">
+    <footer class="footer" v-if="contact">
+        <v-row class="footer__icons">
+            <v-col>
                 <ul>
                     <li>
                         <a :href="contact.github" target="_blank">
-                            <font-awesome-icon :icon="[ 'fab', 'github' ]" class="footer__icon"/>
+                            <font-awesome-icon :icon="[ 'fab', 'github' ]" class="footer__icon" />
                         </a>
                     </li>
 
                     <li>
                         <a :href="contact.linkedin" target="_blank">
-                            <font-awesome-icon :icon="[ 'fab', 'linkedin' ]" class="footer__icon"/>
+                            <font-awesome-icon :icon="[ 'fab', 'linkedin' ]" class="footer__icon" />
                         </a>
                     </li>
 
                     <li>
                         <a :href="contact.facebook" target="_blank">
-                            <font-awesome-icon :icon="[ 'fab', 'facebook' ]" class="footer__icon"/>
+                            <font-awesome-icon :icon="[ 'fab', 'facebook' ]" class="footer__icon" />
                         </a>
                     </li>
 
                     <li>
                         <a :href="contact.twitter" target="_blank">
-                            <font-awesome-icon :icon="[ 'fab', 'twitter' ]" class="footer__icon"/>
+                            <font-awesome-icon :icon="[ 'fab', 'twitter' ]" class="footer__icon" />
                         </a>
                     </li>
 
                     <li>
                         <a :href="contact.instagram" target="_blank">
-                            <font-awesome-icon :icon="[ 'fab', 'instagram' ]" class="footer__icon"/>
+                            <font-awesome-icon :icon="[ 'fab', 'instagram' ]" class="footer__icon" />
                         </a>
                     </li>
 
                     <li>
                         <a :href="'mailto:' + contact.email + '?subject=Hello'">
                             <font-awesome-layers full-width class="footer__icon">
-                                <font-awesome-icon icon="envelope"/>
-                                <span class="fa-layers-counter" style="background:Tomato; right:-3px;">1</span>
+                                <font-awesome-icon icon="envelope" />
+                                <span
+                                    class="fa-layers-counter"
+                                    style="background:Tomato; right:-3px;"
+                                >1</span>
                             </font-awesome-layers>
                         </a>
                     </li>
                 </ul>
-            </div>
-        </div>
+            </v-col>
+        </v-row>
 
-
-        <div class="footer__copyright grid-container fluid">
-            <div class="cell small-12">
-                <div class=footer__copyright--txt>Made with <a href="https://vuejs.org/" target="_blank"><div class="icon icon__vue"></div></a> by J.D. Hillen</div>
-            </div>
-        </div>
-
+        <v-row class="footer__copyright grid-container fluid">
+            <v-col>
+                <div class="footer__copyright--txt">
+                    Made with
+                    <a href="https://vuejs.org/" target="_blank">
+                        <div class="icon icon__vue"></div>
+                    </a> by J.D. Hillen
+                </div>
+            </v-col>
+        </v-row>
     </footer>
 </template>
 
 
 <!--|== Scripts ================================================================================ -->
 <script>
-
-import { mapState } from 'vuex';
+import { mapState } from "vuex";
 
 export default {
-    name: 'site-footer',
+    name: "site-footer",
 
-    components: {
-
-    },
+    components: {},
 
     data() {
-        return {
-
-        };
+        return {};
     },
 
-    beforeCreate() {
-        
-    },
+    beforeCreate() {},
 
-    created() {
+    created() {},
 
-    },
+    beforeMount() {},
 
-    beforeMount() {
+    mounted() {},
 
-    },
+    beforeUpdate() {},
 
-    mounted() {
+    updated() {},
 
-    },
+    beforeDestroy() {},
 
-    beforeUpdate() {
-
-    },
-
-    updated() {
-        
-    },
-
-    beforeDestroy() {
-        
-    },
-
-    destroyed() {
-
-    },
+    destroyed() {},
 
     computed: {
-
         ...mapState({
-            contact: state => state.api.contact,
+            contact: state => state.api.contact
         })
-
     },
 
-    methods: {
+    methods: {},
 
-        
-    },
-
-    watch: {
-        
-    }
-    
-}
-
+    watch: {}
+};
 </script>
 
 
 <!--|== CSS ==================================================================================== -->
 <style lang="scss" scoped>
-
 .footer {
     width: 100%;
     z-index: 100;
@@ -154,7 +128,9 @@ export default {
                     color: white(0.25);
                     transition: 300ms color;
 
-                    &:hover { color: $white; }
+                    &:hover {
+                        color: $white;
+                    }
                 }
             }
         }
@@ -170,7 +146,7 @@ export default {
         background-color: $grey-dark;
 
         &--txt {
-            font-family: 'Lato Hairline';
+            font-family: "Lato Hairline";
             font-size: 8px;
             letter-spacing: 2px;
             text-transform: uppercase;
@@ -178,5 +154,4 @@ export default {
         }
     }
 }
-
 </style>

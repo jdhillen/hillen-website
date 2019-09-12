@@ -1,83 +1,54 @@
 <!--|== Template =============================================================================== -->
 <template>
-    <section class="home">
-
-        <div class="grid-container">
-            <div class="grid-x">
-                <div class="cell">
-                    <img class="home__img" src="~@/assets/img/layout/code_coffee_metal.png" alt="Code Coffee Metal">
-                    <p>New site is under development.</p>
-                </div>
-            </div>
-        </div>
-
-    </section>
+    <v-container class="home">
+        <v-row>
+            <v-col>
+                <img
+                    class="home__img"
+                    src="~@/assets/img/layout/code_coffee_metal.png"
+                    alt="Code Coffee Metal"
+                />
+                <p>New site is under development.</p>
+            </v-col>
+        </v-row>
+    </v-container>
 </template>
 
 
 <!--|== Scripts ================================================================================ -->
 <script>
-
 export default {
-    name: 'home',
+    name: "home",
 
-    components: {
-
-    },
+    components: {},
 
     data() {
-        return {
-            
-        };
+        return {};
     },
 
-    beforeCreate() {
-        
-    },
+    beforeCreate() {},
 
-    created() {
+    created() {},
 
-    },
+    beforeMount() {},
 
-    beforeMount() {
-        
-    },
+    mounted() {},
 
-    mounted() {
-       
-    },
+    beforeUpdate() {},
 
-    beforeUpdate() {
+    updated() {},
 
-    },
+    beforeDestroy() {},
 
-    updated() {
-        
-    },
-
-    beforeDestroy() {
-    
-    },
-
-    destroyed() {
-
-    }
-    
+    destroyed() {}
 };
-
 </script>
 
 
 <!--|== CSS ==================================================================================== -->
 <style lang="scss">
 .home {
-    flex: 1;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
 
     &__img {
         width: 250px;

@@ -1,87 +1,55 @@
 <!--|== Template =============================================================================== -->
 <template>
-    <section class="work">
-       
-        <div class="container">
-            <div class="row">
-                <div class="twelve columns">
-                    <h1>Coming Soon</h1>
-                </div>
-            </div>
-        </div>
-
-    </section>
+    <v-container class="work">
+        <v-row>
+            <v-col>
+                <h1>Coming Soon</h1>
+            </v-col>
+        </v-row>
+    </v-container>
 </template>
+
+
 
 
 <!--|== Scripts ================================================================================ -->
 <script>
-
 export default {
-    name: 'work-page',
+    name: "work-page",
 
-    components: {
-
-    },
+    components: {},
 
     data() {
-        return {
-
-        };
+        return {};
     },
 
-    beforeCreate() {
-        
-    },
+    beforeCreate() {},
 
-    created() {
+    created() {},
 
-    },
+    beforeMount() {},
 
-    beforeMount() {
+    mounted() {},
 
-    },
+    beforeUpdate() {},
 
-    mounted() {
+    updated() {},
 
-    },
+    beforeDestroy() {},
 
-    beforeUpdate() {
+    destroyed() {},
 
-    },
+    computed: {},
 
-    updated() {
-        
-    },
+    methods: {},
 
-    beforeDestroy() {
-        
-    },
-
-    destroyed() {
-
-    },
-
-    computed: {
-
-    },
-
-    methods: {
-
-    },
-
-    watch: {
-        
-    }
+    watch: {}
 };
 </script>
 
 
 <!--|== CSS ==================================================================================== -->
 <style lang="scss">
-
 .work {
-
 }
-
 </style>

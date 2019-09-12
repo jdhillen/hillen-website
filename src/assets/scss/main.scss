@@ -4,10 +4,8 @@
 
 // ==|== Variables =================================================================================
 
-
 // ==|== Imports ===================================================================================
 @import 'vendor/normalize';
-@import 'vendor/skeleton';
 @import 'vendor/nprogress';
 @import 'colors';
 @import 'mixins';
@@ -16,4 +14,4 @@
 @import 'global';
 @import 'icons';
 @import 'page';
-@import "node_modules/hamburgers/_sass/hamburgers/hamburgers";
+@import 'node_modules/hamburgers/_sass/hamburgers/hamburgers';

@@ -1,80 +1,54 @@
 <!--|== Template =============================================================================== -->
 <template>
-    <section class="404">
-        <h1>Oops!</h1>
-        <h3>The page you're looking for does not exist</h3>
-    </section>
+    <v-container class="404">
+        <v-row>
+            <v-col>
+                <h1>Oops!</h1>
+                <h3>The page you're looking for does not exist</h3>
+            </v-col>
+        </v-row>
+    </v-container>
 </template>
 
 
 <!--|== Scripts ================================================================================ -->
 <script>
-
 export default {
-    name: '404-page',
+    name: "404-page",
 
-    components: {
-
-    },
+    components: {},
 
     data() {
-        return {
-
-        };
+        return {};
     },
 
-    beforeCreate() {
-        
-    },
+    beforeCreate() {},
 
-    created() {
+    created() {},
 
-    },
+    beforeMount() {},
 
-    beforeMount() {
+    mounted() {},
 
-    },
+    beforeUpdate() {},
 
-    mounted() {
+    updated() {},
 
-    },
+    beforeDestroy() {},
 
-    beforeUpdate() {
+    destroyed() {},
 
-    },
+    computed: {},
 
-    updated() {
-        
-    },
+    methods: {},
 
-    beforeDestroy() {
-        
-    },
-
-    destroyed() {
-
-    },
-
-    computed: {
-
-    },
-
-    methods: {
-
-    },
-
-    watch: {
-        
-    }
+    watch: {}
 };
 </script>
 
 
 <!--|== CSS ==================================================================================== -->
 <style lang="scss">
-
 .404 {
-
 }
-
 </style>

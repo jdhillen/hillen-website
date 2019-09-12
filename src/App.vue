@@ -1,7 +1,6 @@
 <!--|== Template =============================================================================== -->
 <template>
-    <section id="app" class="app">
-
+    <div id="app" class="app">
         <site-navigation @nav="onNav"></site-navigation>
 
         <animated-fade-in>
@@ -9,66 +8,48 @@
         </animated-fade-in>
 
         <site-footer :class="{ 'blur': blurActive }"></site-footer>
-
-    </section>
+    </div>
 </template>
 
 
 <!--|== Scripts ================================================================================ -->
 <script>
-
-import SiteNavigation from '@/components/layout/Navigation';
-import SiteFooter from '@/components/layout/Footer';
+import SiteNavigation from "@/components/layout/Navigation";
+import SiteFooter from "@/components/layout/Footer";
 
 export default {
-    name: 'app',
+    name: "app",
 
     components: {
         SiteNavigation,
-        SiteFooter,
+        SiteFooter
     },
 
     data() {
         return {
-            blurActive: false,
+            blurActive: false
         };
     },
 
     beforeCreate() {
-        this.$store.dispatch('api/fetchContact');
+        this.$store.dispatch("api/fetchContact");
     },
 
-    created() {
+    created() {},
 
-    },
+    beforeMount() {},
 
-    beforeMount() {
-        
-    },
+    mounted() {},
 
-    mounted() {
+    beforeUpdate() {},
 
-    },
+    updated() {},
 
-    beforeUpdate() {
+    beforeDestroy() {},
 
-    },
+    destroyed() {},
 
-    updated() {
-        
-    },
-
-    beforeDestroy() {
-        
-    },
-
-    destroyed() {
-
-    },
-
-    computed: {
-
-    },
+    computed: {},
 
     methods: {
         onNav(value) {
@@ -76,21 +57,16 @@ export default {
         }
     },
 
-    watch: {
-        
-    }
-    
-}
+    watch: {}
+};
 </script>
 
 
 <!--|== CSS ==================================================================================== -->
 <style lang="scss">
-
 .app {
     height: 100%;
     display: flex;
     flex-direction: column;
 }
-
 </style>
