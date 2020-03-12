@@ -14,8 +14,8 @@
 
 <!--|== Scripts ================================================================================ -->
 <script>
-import SiteNavigation from "@/components/layout/Navigation";
-import SiteFooter from "@/components/layout/Footer";
+import SiteNavigation from "@/components/global/Navigation";
+import SiteFooter from "@/components/global/Footer";
 
 export default {
     name: "app",

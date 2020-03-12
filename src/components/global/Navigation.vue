@@ -1,9 +1,13 @@
 <!--|== Template =============================================================================== -->
 <template>
     <nav class="nav">
-
         <div class="nav__container">
-            <button class="hamburger hamburger--squeeze" :class="{ 'is-active': isActive }" @click="toggleNav()" type="button">
+            <button
+                class="hamburger hamburger--squeeze"
+                :class="{ 'is-active': isActive }"
+                @click="toggleNav()"
+                type="button"
+            >
                 <span class="hamburger-box">
                     <span class="hamburger-inner"></span>
                 </span>
@@ -14,72 +18,49 @@
             <router-link class="nav__item" to="/" @click.native="toggleNav()">Home</router-link>
             <router-link class="nav__item" to="/about" @click.native="toggleNav()">About</router-link>
             <router-link class="nav__item" to="/work" @click.native="toggleNav()">Work</router-link>
-            <router-link class="nav__item" to="/resume" @click.native="toggleNav()">Resume</router-link>
+            <!-- <router-link class="nav__item" to="/resume" @click.native="toggleNav()">Resume</router-link> -->
         </div>
-        
     </nav>
 </template>
 
 
 <!--|== Scripts ================================================================================ -->
 <script>
-
-import {TweenMax, Back} from "gsap/TweenMax";
+import { TweenMax, Back } from "gsap/TweenMax";
 
 export default {
-    name: 'site-navigation',
+    name: "site-navigation",
 
-    components: {
-
-    },
+    components: {},
 
     data() {
         return {
-            isActive: false,
+            isActive: false
         };
     },
 
-    beforeCreate() {
-        
-    },
+    beforeCreate() {},
 
-    created() {
+    created() {},
 
-    },
+    beforeMount() {},
 
-    beforeMount() {
-        
-    },
+    mounted() {},
 
-    mounted() {
-    
-    },
+    beforeUpdate() {},
 
-    beforeUpdate() {
+    updated() {},
 
-    },
+    beforeDestroy() {},
 
-    updated() {
-        
-    },
+    destroyed() {},
 
-    beforeDestroy() {
-    
-    },
-
-    destroyed() {
-
-    },
-
-    computed: {
-
-    },
+    computed: {},
 
     methods: {
-
         toggleNav: function() {
             this.isActive = !this.isActive;
-            if (this.isActive) { 
+            if (this.isActive) {
                 this.animateIn();
             } else {
                 this.animateOut();
@@ -87,29 +68,31 @@ export default {
         },
 
         animateIn: function() {
-            TweenMax.staggerTo(this.$refs.links.children, 0.35, {top:"0px", autoAlpha:1, ease:Back.easeOut.config(1.5)}, 0.1);
-            this.$emit('nav', this.isActive);
-         },
+            TweenMax.staggerTo(
+                this.$refs.links.children,
+                0.35,
+                { top: "0px", autoAlpha: 1, ease: Back.easeOut.config(1.5) },
+                0.1
+            );
+            this.$emit("nav", this.isActive);
+        },
 
         animateOut: function() {
-            TweenMax.set(this.$refs.links.children, { top:"50px", autoAlpha:0 });
-            this.$emit('nav', this.isActive);
+            TweenMax.set(this.$refs.links.children, {
+                top: "50px",
+                autoAlpha: 0
+            });
+            this.$emit("nav", this.isActive);
         }
-
     },
 
-    watch: {
-        
-    }
-    
+    watch: {}
 };
-
 </script>
 
 
 <!--|== CSS ==================================================================================== -->
 <style lang="scss">
-
 .nav {
     position: fixed;
     width: 100%;
@@ -125,7 +108,7 @@ export default {
         &-inner,
         &-inner::before,
         &-inner::after {
-            background-color: black(0.70);
+            background-color: black(0.7);
         }
 
         &.is-active {
@@ -147,7 +130,7 @@ export default {
         top: 0;
         left: 0;
         width: 100%;
-        height: 100vh; 
+        height: 100vh;
         background-color: black(0.75);
         z-index: 900;
         display: flex;
@@ -159,7 +142,6 @@ export default {
         -webkit-transition: opacity 0.25s;
         -o-transition: opacity 0.25s;
         transition: opacity 0.5s;
-        
 
         &.is-active {
             visibility: visible;
@@ -170,12 +152,10 @@ export default {
     &__item {
         color: $white;
         text-transform: uppercase;
-        font-family: 'Lato Black';
+        font-family: "Lato Black";
         font-size: 50px;
         letter-spacing: 4px;
         @extend %nav-links-animate;
     }
-
 }
-
 </style>
