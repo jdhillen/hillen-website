@@ -1,13 +1,13 @@
 <!--|== Template =============================================================================== -->
 <template>
     <div id="app" class="app">
-        <site-navigation @nav="onNav"></site-navigation>
+        <site-navigation></site-navigation>
 
         <animated-fade-in>
-            <router-view class="page" :class="{ 'blur': blurActive }"></router-view>
+            <router-view class="page"></router-view>
         </animated-fade-in>
 
-        <site-footer :class="{ 'blur': blurActive }"></site-footer>
+        <site-footer></site-footer>
     </div>
 </template>
 
@@ -22,12 +22,12 @@ export default {
 
     components: {
         SiteNavigation,
-        SiteFooter
+        SiteFooter,
     },
 
     data() {
         return {
-            blurActive: false
+            blurActive: false,
         };
     },
 
@@ -51,13 +51,9 @@ export default {
 
     computed: {},
 
-    methods: {
-        onNav(value) {
-            this.blurActive = value;
-        }
-    },
+    methods: {},
 
-    watch: {}
+    watch: {},
 };
 </script>
 

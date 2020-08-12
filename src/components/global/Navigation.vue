@@ -35,7 +35,7 @@ export default {
 
     data() {
         return {
-            isActive: false
+            isActive: false,
         };
     },
 
@@ -80,13 +80,13 @@ export default {
         animateOut: function() {
             TweenMax.set(this.$refs.links.children, {
                 top: "50px",
-                autoAlpha: 0
+                autoAlpha: 0,
             });
             this.$emit("nav", this.isActive);
-        }
+        },
     },
 
-    watch: {}
+    watch: {},
 };
 </script>
 
@@ -146,6 +146,13 @@ export default {
         &.is-active {
             visibility: visible;
             opacity: 1;
+        }
+    }
+
+    @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+        &__wrapper {
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
         }
     }
 
