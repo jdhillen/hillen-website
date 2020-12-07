@@ -26,67 +26,62 @@
 
 <!--|== Scripts ================================================================================ -->
 <script>
-import { TweenMax, Back } from "gsap/TweenMax";
+import { TweenMax, Back } from 'gsap/TweenMax';
 
 export default {
-    name: "site-navigation",
+	name: 'site-navigation',
 
-    components: {},
+	components: {},
 
-    data() {
-        return {
-            isActive: false,
-        };
-    },
+	data() {
+		return {
+			isActive: false
+		};
+	},
 
-    beforeCreate() {},
+	beforeCreate() {},
 
-    created() {},
+	created() {},
 
-    beforeMount() {},
+	beforeMount() {},
 
-    mounted() {},
+	mounted() {},
 
-    beforeUpdate() {},
+	beforeUpdate() {},
 
-    updated() {},
+	updated() {},
 
-    beforeDestroy() {},
+	beforeDestroy() {},
 
-    destroyed() {},
+	destroyed() {},
 
-    computed: {},
+	computed: {},
 
-    methods: {
-        toggleNav: function() {
-            this.isActive = !this.isActive;
-            if (this.isActive) {
-                this.animateIn();
-            } else {
-                this.animateOut();
-            }
-        },
+	methods: {
+		toggleNav: function() {
+			this.isActive = !this.isActive;
+			if (this.isActive) {
+				this.animateIn();
+			} else {
+				this.animateOut();
+			}
+		},
 
-        animateIn: function() {
-            TweenMax.staggerTo(
-                this.$refs.links.children,
-                0.35,
-                { top: "0px", autoAlpha: 1, ease: Back.easeOut.config(1.5) },
-                0.1
-            );
-            this.$emit("nav", this.isActive);
-        },
+		animateIn: function() {
+			TweenMax.staggerTo(this.$refs.links.children, 0.35, { top: '0px', autoAlpha: 1, ease: Back.easeOut.config(1.5) }, 0.1);
+			this.$emit('nav', this.isActive);
+		},
 
-        animateOut: function() {
-            TweenMax.set(this.$refs.links.children, {
-                top: "50px",
-                autoAlpha: 0,
-            });
-            this.$emit("nav", this.isActive);
-        },
-    },
+		animateOut: function() {
+			TweenMax.set(this.$refs.links.children, {
+				top: '50px',
+				autoAlpha: 0
+			});
+			this.$emit('nav', this.isActive);
+		}
+	},
 
-    watch: {},
+	watch: {}
 };
 </script>
 
@@ -94,75 +89,75 @@ export default {
 <!--|== CSS ==================================================================================== -->
 <style lang="scss">
 .nav {
-    position: fixed;
-    width: 100%;
-    height: 75px;
-    z-index: 200;
+	position: fixed;
+	width: 100%;
+	height: 75px;
+	z-index: 200;
 
-    .hamburger {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        z-index: 1000;
+	.hamburger {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		z-index: 1000;
 
-        &-inner,
-        &-inner::before,
-        &-inner::after {
-            background-color: black(0.7);
-        }
+		&-inner,
+		&-inner::before,
+		&-inner::after {
+			background-color: black(0.7);
+		}
 
-        &.is-active {
-            .hamburger-inner,
-            .hamburger-inner::before,
-            .hamburger-inner::after {
-                background-color: $white;
-            }
-        }
-    }
+		&.is-active {
+			.hamburger-inner,
+			.hamburger-inner::before,
+			.hamburger-inner::after {
+				background-color: $white;
+			}
+		}
+	}
 
-    &__container {
-        width: 100%;
-        height: 75px;
-    }
+	&__container {
+		width: 100%;
+		height: 75px;
+	}
 
-    &__wrapper {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        background-color: black(0.75);
-        z-index: 900;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        visibility: hidden;
-        opacity: 0;
-        -webkit-transition: opacity 0.25s;
-        -o-transition: opacity 0.25s;
-        transition: opacity 0.5s;
+	&__wrapper {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100vh;
+		background-color: black(0.75);
+		z-index: 900;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		visibility: hidden;
+		opacity: 0;
+		-webkit-transition: opacity 0.25s;
+		-o-transition: opacity 0.25s;
+		transition: opacity 0.5s;
 
-        &.is-active {
-            visibility: visible;
-            opacity: 1;
-        }
-    }
+		&.is-active {
+			visibility: visible;
+			opacity: 1;
+		}
+	}
 
-    @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
-        &__wrapper {
-            -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
-        }
-    }
+	@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+		&__wrapper {
+			-webkit-backdrop-filter: blur(10px);
+			backdrop-filter: blur(10px);
+		}
+	}
 
-    &__item {
-        color: $white;
-        text-transform: uppercase;
-        font-family: "Lato Black";
-        font-size: 50px;
-        letter-spacing: 4px;
-        @extend %nav-links-animate;
-    }
+	&__item {
+		color: $white;
+		text-transform: uppercase;
+		font-family: 'Lato Black';
+		font-size: 50px;
+		letter-spacing: 4px;
+		@extend %nav-links-animate;
+	}
 }
 </style>

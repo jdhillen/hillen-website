@@ -14,46 +14,46 @@
 
 <!--|== Scripts ================================================================================ -->
 <script>
-import SiteNavigation from "@/components/global/Navigation";
-import SiteFooter from "@/components/global/Footer";
+import SiteNavigation from '@/components/global/Navigation';
+import SiteFooter from '@/components/global/Footer';
 
 export default {
-    name: "app",
+	name: 'app',
 
-    components: {
-        SiteNavigation,
-        SiteFooter,
-    },
+	components: {
+		SiteNavigation,
+		SiteFooter
+	},
 
-    data() {
-        return {
-            blurActive: false,
-        };
-    },
+	data() {
+		return {
+			blurActive: false
+		};
+	},
 
-    beforeCreate() {
-        this.$store.dispatch("api/fetchContact");
-    },
+	beforeCreate() {
+		this.$store.dispatch('api/fetchContact');
+	},
 
-    created() {},
+	created() {},
 
-    beforeMount() {},
+	beforeMount() {},
 
-    mounted() {},
+	mounted() {},
 
-    beforeUpdate() {},
+	beforeUpdate() {},
 
-    updated() {},
+	updated() {},
 
-    beforeDestroy() {},
+	beforeDestroy() {},
 
-    destroyed() {},
+	destroyed() {},
 
-    computed: {},
+	computed: {},
 
-    methods: {},
+	methods: {},
 
-    watch: {},
+	watch: {}
 };
 </script>
 
@@ -61,8 +61,8 @@ export default {
 <!--|== CSS ==================================================================================== -->
 <style lang="scss">
 .app {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
 }
 </style>

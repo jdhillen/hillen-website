@@ -18,29 +18,29 @@
 <!--|== Scripts ================================================================================ -->
 <script>
 export default {
-    name: "home",
+	name: 'home',
 
-    components: {},
+	components: {},
 
-    data() {
-        return {};
-    },
+	data() {
+		return {};
+	},
 
-    beforeCreate() {},
+	beforeCreate() {},
 
-    created() {},
+	created() {},
 
-    beforeMount() {},
+	beforeMount() {},
 
-    mounted() {},
+	mounted() {},
 
-    beforeUpdate() {},
+	beforeUpdate() {},
 
-    updated() {},
+	updated() {},
 
-    beforeDestroy() {},
+	beforeDestroy() {},
 
-    destroyed() {}
+	destroyed() {}
 };
 </script>
 
@@ -48,12 +48,12 @@ export default {
 <!--|== CSS ==================================================================================== -->
 <style lang="scss">
 .home {
-    text-align: center;
+	text-align: center;
 
-    &__img {
-        width: 250px;
-        height: 230px;
-        margin-bottom: 20px;
-    }
+	&__img {
+		width: 250px;
+		height: 230px;
+		margin-bottom: 20px;
+	}
 }
 </style>

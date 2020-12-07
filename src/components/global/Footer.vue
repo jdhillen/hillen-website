@@ -65,42 +65,42 @@
 
 <!--|== Scripts ================================================================================ -->
 <script>
-import { mapState } from "vuex";
+import { mapState } from 'vuex';
 
 export default {
-    name: "site-footer",
+	name: 'site-footer',
 
-    components: {},
+	components: {},
 
-    data() {
-        return {};
-    },
+	data() {
+		return {};
+	},
 
-    beforeCreate() {},
+	beforeCreate() {},
 
-    created() {},
+	created() {},
 
-    beforeMount() {},
+	beforeMount() {},
 
-    mounted() {},
+	mounted() {},
 
-    beforeUpdate() {},
+	beforeUpdate() {},
 
-    updated() {},
+	updated() {},
 
-    beforeDestroy() {},
+	beforeDestroy() {},
 
-    destroyed() {},
+	destroyed() {},
 
-    computed: {
-        ...mapState({
-            contact: state => state.api.contact
-        })
-    },
+	computed: {
+		...mapState({
+			contact: state => state.api.contact
+		})
+	},
 
-    methods: {},
+	methods: {},
 
-    watch: {}
+	watch: {}
 };
 </script>
 
@@ -108,50 +108,50 @@ export default {
 <!--|== CSS ==================================================================================== -->
 <style lang="scss" scoped>
 .footer {
-    width: 100%;
-    z-index: 100;
+	width: 100%;
+	z-index: 100;
 
-    &__icons {
-        text-align: center;
-        padding: 20px 0;
-        background-color: $grey-light;
+	&__icons {
+		text-align: center;
+		padding: 20px 0;
+		background-color: $grey-light;
 
-        ul {
-            margin: 0;
-            padding: 0;
+		ul {
+			margin: 0;
+			padding: 0;
 
-            li {
-                padding: 0 20px;
-                display: inline;
+			li {
+				padding: 0 20px;
+				display: inline;
 
-                a {
-                    color: white(0.25);
-                    transition: 300ms color;
+				a {
+					color: white(0.25);
+					transition: 300ms color;
 
-                    &:hover {
-                        color: $white;
-                    }
-                }
-            }
-        }
-    }
+					&:hover {
+						color: $white;
+					}
+				}
+			}
+		}
+	}
 
-    &__icon {
-        transform: scale(1.75);
-    }
+	&__icon {
+		transform: scale(1.75);
+	}
 
-    &__copyright {
-        text-align: center;
-        padding: 30px 0;
-        background-color: $grey-dark;
+	&__copyright {
+		text-align: center;
+		padding: 30px 0;
+		background-color: $grey-dark;
 
-        &--txt {
-            font-family: "Lato Hairline";
-            font-size: 8px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: $white;
-        }
-    }
+		&--txt {
+			font-family: 'Lato Hairline';
+			font-size: 8px;
+			letter-spacing: 2px;
+			text-transform: uppercase;
+			color: $white;
+		}
+	}
 }
 </style>

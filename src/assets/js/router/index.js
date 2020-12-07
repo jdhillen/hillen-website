@@ -2,12 +2,10 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import NProgress from 'nprogress';
-import store from '@/assets/js/store'
-
+import store from '@/assets/js/store';
 
 // ==|== VueRouter =================================================================================
 Vue.use(Router);
-
 
 // ==|== Router ====================================================================================
 const router = new Router({
@@ -27,7 +25,7 @@ const router = new Router({
 		{
 			path: '/work',
 			name: 'work',
-			component: require('@/views/Work').default,
+			component: require('@/views/Work').default
 		},
 		{
 			path: '/resume',
@@ -35,8 +33,7 @@ const router = new Router({
 			component: require('@/views/Resume').default,
 			props: true,
 			beforeEnter(routeTo, routeFrom, next) {
-				store.dispatch('api/fetchResume')
-				.then( resume => {
+				store.dispatch('api/fetchResume').then(resume => {
 					routeTo.params.resume = resume;
 					next();
 				});
@@ -49,22 +46,20 @@ const router = new Router({
 		},
 		{
 			path: '*',
-			redirect: { name: '404'}
+			redirect: { name: '404' }
 		}
 	]
-})
-
+});
 
 // ==|== Route Guards ==============================================================================
 router.beforeEach((routeTo, routeFrom, next) => {
 	NProgress.start();
 	next();
-})
+});
 
 router.afterEach(() => {
 	NProgress.done();
-})
-
+});
 
 // ==|== Export ====================================================================================
 export default router;

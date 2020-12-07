@@ -14,35 +14,35 @@
 <!--|== Scripts ================================================================================ -->
 <script>
 export default {
-    name: "404-page",
+	name: '404-page',
 
-    components: {},
+	components: {},
 
-    data() {
-        return {};
-    },
+	data() {
+		return {};
+	},
 
-    beforeCreate() {},
+	beforeCreate() {},
 
-    created() {},
+	created() {},
 
-    beforeMount() {},
+	beforeMount() {},
 
-    mounted() {},
+	mounted() {},
 
-    beforeUpdate() {},
+	beforeUpdate() {},
 
-    updated() {},
+	updated() {},
 
-    beforeDestroy() {},
+	beforeDestroy() {},
 
-    destroyed() {},
+	destroyed() {},
 
-    computed: {},
+	computed: {},
 
-    methods: {},
+	methods: {},
 
-    watch: {}
+	watch: {}
 };
 </script>
 

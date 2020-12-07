@@ -117,65 +117,65 @@
 
 <!--|== Scripts ================================================================================ -->
 <script>
-import _ from "underscore";
+import _ from 'underscore';
 
 export default {
-    name: "resume-page",
+	name: 'resume-page',
 
-    components: {},
+	components: {},
 
-    props: {
-        resume: {
-            type: Object,
-            required: true
-        }
-    },
+	props: {
+		resume: {
+			type: Object,
+			required: true
+		}
+	},
 
-    data() {
-        return {
-            contact: [],
-            about: [],
-            skills: [],
-            education: [],
-            awards: [],
-            jobs: [],
-            references: []
-        };
-    },
+	data() {
+		return {
+			contact: [],
+			about: [],
+			skills: [],
+			education: [],
+			awards: [],
+			jobs: [],
+			references: []
+		};
+	},
 
-    beforeCreate() {},
+	beforeCreate() {},
 
-    created() {
-        this.sortResume();
-    },
+	created() {
+		this.sortResume();
+	},
 
-    beforeMount() {},
+	beforeMount() {},
 
-    mounted() {},
+	mounted() {},
 
-    beforeUpdate() {},
+	beforeUpdate() {},
 
-    updated() {},
+	updated() {},
 
-    beforeDestroy() {},
+	beforeDestroy() {},
 
-    destroyed() {},
+	destroyed() {},
 
-    computed: {},
+	computed: {},
 
-    methods: {
-        sortResume: function() {
-            this.contact = this.resume["Contact"][0];
-            this.about = this.resume["About"][0];
-            this.skills = _.groupBy(this.resume["Skill"], "skill_type");
-            this.education = this.resume["Education"][0];
-            this.awards = this.resume["Award"];
-            this.jobs = this.resume["Job"];
-            this.references = this.resume["Reference"];
-        }
-    },
+	methods: {
+		sortResume: function() {
+			this.contact = this.resume['Contact'][0];
+			this.about = this.resume['About'][0];
+			this.skills = _.groupBy(this.resume['Skill'], 'skill_type');
+			this.education = this.resume['Education'][0];
+			this.awards = this.resume['Award'];
+			this.jobs = this.resume['Job'];
+			this.references = this.resume['Reference'];
+		}
+	},
 
-    watch: {}
+	watch: {}
 };
 </script>
 
@@ -183,35 +183,35 @@ export default {
 <!--|== CSS ==================================================================================== -->
 <style lang="scss">
 .resume {
-    .contact,
-    .about,
-    .skills,
-    .education,
-    .awards,
-    .experiences,
-    .references {
-        margin-bottom: 25px;
-    }
+	.contact,
+	.about,
+	.skills,
+	.education,
+	.awards,
+	.experiences,
+	.references {
+		margin-bottom: 25px;
+	}
 
-    .contact {
-    }
+	.contact {
+	}
 
-    .about {
-    }
+	.about {
+	}
 
-    .skills {
-    }
+	.skills {
+	}
 
-    .education {
-    }
+	.education {
+	}
 
-    .awards {
-    }
+	.awards {
+	}
 
-    .experience {
-    }
+	.experience {
+	}
 
-    .references {
-    }
+	.references {
+	}
 }
 </style>
