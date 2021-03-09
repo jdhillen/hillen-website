@@ -10,7 +10,8 @@ var api = {
 	state: {
 		about: [],
 		contact: [],
-		resume: []
+		resume: [],
+		social: []
 	},
 
 	// ==|== Actions ===============================================================================
@@ -32,6 +33,13 @@ var api = {
 				commit('SET_RESUME', response.data);
 				return response.data;
 			});
+		},
+
+		fetchSocial({ commit }) {
+			return Service.getSocial().then(response => {
+				commit('SET_SOCIAL', response.data);
+				return response.data;
+			});
 		}
 	},
 
@@ -47,6 +55,10 @@ var api = {
 
 		SET_RESUME(state, value) {
 			state.resume = value;
+		},
+
+		SET_SOCIAL(state, value) {
+			state.social = value;
 		}
 	},
 

@@ -33,6 +33,7 @@ export default {
 
 	beforeCreate() {
 		this.$store.dispatch('api/fetchContact');
+		this.$store.dispatch('api/fetchSocial');
 	},
 
 	created() {},

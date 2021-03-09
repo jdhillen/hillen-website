@@ -24,5 +24,9 @@ export default {
 
 	getResume() {
 		return apiClient.get('/resume/');
+	},
+
+	getSocial() {
+		return apiClient.get('/links/social/');
 	}
 };

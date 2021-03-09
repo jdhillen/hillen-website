@@ -4,36 +4,11 @@
         <v-row class="footer__icons">
             <v-col>
                 <ul>
-                    <li>
-                        <a :href="contact.github" target="_blank">
-                            <font-awesome-icon :icon="[ 'fab', 'github' ]" class="footer__icon" />
+                    <li v-for="(item, index) in social" :key="index">
+                      <a :href="item.url" target="_blank" :alt="item.name">
+                            <font-awesome-icon :icon="[ 'fab', `${item.icon}` ]" class="footer__icon" />
                         </a>
                     </li>
-
-                    <li>
-                        <a :href="contact.linkedin" target="_blank">
-                            <font-awesome-icon :icon="[ 'fab', 'linkedin' ]" class="footer__icon" />
-                        </a>
-                    </li>
-
-                    <li>
-                        <a :href="contact.facebook" target="_blank">
-                            <font-awesome-icon :icon="[ 'fab', 'facebook' ]" class="footer__icon" />
-                        </a>
-                    </li>
-
-                    <li>
-                        <a :href="contact.twitter" target="_blank">
-                            <font-awesome-icon :icon="[ 'fab', 'twitter' ]" class="footer__icon" />
-                        </a>
-                    </li>
-
-                    <li>
-                        <a :href="contact.instagram" target="_blank">
-                            <font-awesome-icon :icon="[ 'fab', 'instagram' ]" class="footer__icon" />
-                        </a>
-                    </li>
-
                     <li>
                         <a :href="'mailto:' + contact.email + '?subject=Hello'">
                             <font-awesome-layers full-width class="footer__icon">
@@ -94,7 +69,8 @@ export default {
 
 	computed: {
 		...mapState({
-			contact: state => state.api.contact
+			contact: state => state.api.contact,
+			social: state => state.api.social
 		})
 	},
 
